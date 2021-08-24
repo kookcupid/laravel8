@@ -27,7 +27,6 @@
 @endsection
 
 
-
 @section('page-script')
 
 <script>

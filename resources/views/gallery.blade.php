@@ -7,6 +7,7 @@
     <h1 class="text-center">gallery Page</h1>
 
     <section style="padding-top:60px;">
+    
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -16,6 +17,7 @@
                 </div>
             </div>
         </div>
+
     </section>
 
 @endsection
