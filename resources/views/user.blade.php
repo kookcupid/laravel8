@@ -13,10 +13,5 @@
     <p>Email : {{$users['email']}}</p>
     <p>Phone : {{$users['phone']}}</p>
     
-            <a href="/">home</a>
-            <a href="/posts">Posts</a>
-            <a href="/add-post">Add</a>
-            <a href="/login">login</a>
-            <a href="/user">user</a>
 </body>
 </html>

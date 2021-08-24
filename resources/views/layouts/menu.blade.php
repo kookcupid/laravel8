@@ -10,6 +10,9 @@
                 <a class="nav-link active" aria-current="page" href="/home">Home</a>
                 </li>
                 <li class="nav-item">
+                <a class="nav-link" href="/posts">Posts</a>
+                </li>
+                <li class="nav-item">
                 <a class="nav-link" href="/upload">Upload</a>
                 </li>
                 <li class="nav-item">
@@ -24,9 +27,21 @@
                 <a class="nav-link" href="/gallery">Gallery</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="/editor">tinymce editor</a>
+                <a class="nav-link" href="/editor">tinymce-editor</a>
                 </li>
             </ul>
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/register">Register</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+                </li>
+            </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
             </div>
         </div>
         </nav>

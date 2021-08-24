@@ -22,23 +22,6 @@
     </head>
     <body class="antialiased">
         <x-header name="Surfside Media" :fruits="$fruits"/>
-
-    <div class="container">
-        <li class="nav-item">
-          <a class="nav-link" href="/">home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/posts">Posts</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/add-post">Add</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/login">login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/user">user</a>
-        </li>
-    </div>        
+  
     </body>
 </html>

@@ -26,6 +26,10 @@ h3 {
   vertical-align: middle;
 }
 
+.wrapper {
+    text-align: center;
+}
+
 img{
     background-color: grey;
     height: 250px;

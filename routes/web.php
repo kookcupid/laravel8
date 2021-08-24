@@ -7,6 +7,7 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SessionController;
@@ -50,9 +51,9 @@ Route::get('/update-post',[ClientController::class,'updatePost'])->name('posts.u
 
 Route::get('/delete-post/{id}', [ClientController::class,'deletePost'])->name('posts.delete');
 
-Route::get('/login',[LoginController::class,'index'])->name('login.index')->middleware('checkuser');
+// Route::get('/login',[LoginController::class,'index'])->name('login.index')->middleware('checkuser');
 
-Route::post('/login',[LoginController::class,'loginSubmit'])->name('login.submit');
+// Route::post('/login',[LoginController::class,'loginSubmit'])->name('login.submit');
 
 Route::get('/session/get',[SessionController::class ,'getSessionDate'])->name('session.get');
 
@@ -82,6 +83,8 @@ Route::get('/payment',function(){
     return Payment::process();
 });
 
+Route::get('/send-email', [MailController::class, 'sendEmail']);
+
 Route::get('/upload', [UploadController::class,'uploadForm']);
 
 Route::post('/upload', [UploadController::class,'uploadFile'])->name('upload.uploadfile');
@@ -98,4 +101,6 @@ Route::post('/resize-image',[ImageController::class, 'resizeImageSubmit'])->name
 
 Route::get('/editor',[EditorController::class,'editor']);
 
-
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
