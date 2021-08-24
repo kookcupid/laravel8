@@ -1,11 +1,13 @@
 <?php
 
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\DropzoneController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\UploadController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Login;
 use Illuminate\Support\Facades\Http;
@@ -23,7 +25,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[ProductController::class,'index'])->name('product.index');
+// Route::get('/{locale}', function($locale){
+//     App::setlocale($locale);
+//     return view('index');
+// });
+
+// Route::get('/',[ProductController::class,'index'])->name('product.index');
 
 Route::get('/home/{name}',[HomeController::class,'index'])->name('home.index');
 
@@ -63,8 +70,25 @@ Route::get('/edit-post/{id}', [PostController::class,'editPost'])->name('post.ed
 
 Route::post('/update-post',[PostController::class,'updatePost'])->name('post.update');
 
+Route::get('/home' ,function(){
+    return view('index');
+});
 
+Route::get('/about' ,function(){
+    return view('about');
+});
 
+Route::get('/contact' ,function(){
+    return view('contact');
+});
+
+Route::get('/upload', [UploadController::class,'uploadForm']);
+
+Route::post('/upload', [UploadController::class,'uploadFile'])->name('upload.uploadfile');
+
+Route::get('/dropzone', [DropzoneController::class, 'dropzone']);
+
+Route::post('/dropzone-store', [DropzoneController::class,'dropzoneStore'])->name('dropzone.store');
 
 
 
