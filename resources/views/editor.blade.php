@@ -36,8 +36,6 @@
    });
   </script>
 
- <script src="https://cdn.tiny.cloud/1/e16h337sauyho7sptejoq3gcim1qaxhoyla1v4vnaergsa5n/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-
 @endsection
 
 
