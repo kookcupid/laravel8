@@ -2,13 +2,7 @@
 @section('title','dropzone')
 @section('content')
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-            <h1 class="text-center">Dropzone Page</h1>
-            </div>
-        </div>
-    </div>
+    <h1 class="text-center">Dropzone Page</h1>
 
     <section style="padding-top:60px;">
         <div class="container">

@@ -15,6 +15,14 @@
                 <li class="nav-item">
                 <a class="nav-link" href="/dropzone">Dropzone</a>
                 </li>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="/resize-image">Resize-Image</a>
+                </li>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="/gallery">Gallery</a>
+                </li>
             </ul>
             </div>
         </div>
