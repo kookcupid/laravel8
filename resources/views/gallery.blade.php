@@ -2,16 +2,7 @@
 @section('title','gallery')
 @section('content')
 
-<style>
-    img{
-        background-color: grey;
-        height: 250px;
-        width:  100%;
-        border: 1px solid grey;
-        margin-top: 20px;
-        box-shadow: 0 8px 6px -6px black;
-    }
-</style>
+
 
     <h1 class="text-center">gallery Page</h1>
 
