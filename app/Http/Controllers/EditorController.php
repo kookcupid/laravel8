@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class EditorController extends Controller
 {
-    public function editer()
+    public function editor()
     {
         return view ('editor');
     }

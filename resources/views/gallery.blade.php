@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('title','gallery')
+@section('content')
+
 <style>
     img{
         background-color: grey;
@@ -9,10 +12,6 @@
         box-shadow: 0 8px 6px -6px black;
     }
 </style>
-@section('title','gallery')
-@section('content')
-
-
 
     <h1 class="text-center">gallery Page</h1>
 

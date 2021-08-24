@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\DropzoneController;
+use App\Http\Controllers\EditorController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ImageController;
@@ -95,6 +96,6 @@ Route::get('/resize-image',[ImageController::class, 'resizeImage']);
 
 Route::post('/resize-image',[ImageController::class, 'resizeImageSubmit'])->name('image.resize');
 
-Route::get('edittor',)p
+Route::get('/editor',[EditorController::class,'editor']);
 
 

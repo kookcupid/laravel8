@@ -23,6 +23,9 @@
                 <li class="nav-item">
                 <a class="nav-link" href="/gallery">Gallery</a>
                 </li>
+                <li class="nav-item">
+                <a class="nav-link" href="/editor">tinymce editor</a>
+                </li>
             </ul>
             </div>
         </div>
