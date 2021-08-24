@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\DropzoneController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
@@ -12,6 +14,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Login;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
+use App\PaymentGateway\Payment;
 
 
 /*
@@ -74,12 +77,8 @@ Route::get('/home' ,function(){
     return view('index');
 });
 
-Route::get('/about' ,function(){
-    return view('about');
-});
-
-Route::get('/contact' ,function(){
-    return view('contact');
+Route::get('/payment',function(){
+    return Payment::process();
 });
 
 Route::get('/upload', [UploadController::class,'uploadForm']);
@@ -90,5 +89,12 @@ Route::get('/dropzone', [DropzoneController::class, 'dropzone']);
 
 Route::post('/dropzone-store', [DropzoneController::class,'dropzoneStore'])->name('dropzone.store');
 
+Route::get('/gallery', [GalleryController::class, 'gallery']);
+
+Route::get('/resize-image',[ImageController::class, 'resizeImage']);
+
+Route::post('/resize-image',[ImageController::class, 'resizeImageSubmit'])->name('image.resize');
+
+Route::get('edittor',)p
 
 
