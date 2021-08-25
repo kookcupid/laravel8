@@ -15,6 +15,8 @@
 
     @include('layouts.pagescript')
 
+    @yield('page-script')
+
 </body>
 
 </html>
