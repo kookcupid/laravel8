@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\posts;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use PhpOffice\PhpSpreadsheet\Calculation\Statistical\Distributions\F;
+use PhpOffice\PhpSpreadsheet\Chart\Title;
 
 class PostController extends Controller
 {
@@ -13,10 +16,10 @@ class PostController extends Controller
         return view('posts',compact('posts'));
     }
 
-    public function addPost()
-    {
-        return view('add-post');
-    }
+    // public function addPost()
+    // {
+    //     return view('add-post');
+    // }
 
     public function addPostSubmit(Request $request)
     {
@@ -53,6 +56,22 @@ class PostController extends Controller
         ]);
         return back()->with('post_updated','Post has been updated successfully!');
     }
+
+    public function index()
+    {
+        $posts = Posts::orderBy('id','desc')->get();
+        return view('posts',compact('posts'));
+    }
+
+    public function addPost(Request $request)
+    {
+        $post = new Posts();
+        $post-> title = $request->title;
+        $post-> body = $request->body;
+        $request->save();
+        return response()->json($post);
+    }
+
 }
 
 

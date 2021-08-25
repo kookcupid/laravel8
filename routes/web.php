@@ -3,6 +3,7 @@
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\DropzoneController;
 use App\Http\Controllers\EditorController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ImageController;
@@ -63,8 +64,12 @@ Route::get('/session/set',[SessionController::class ,'storeSessionData'])->name(
 Route::get('/session/remove',[SessionController::class ,'deleteSessionDate'])->name('session.delete');
 
 Route::get('/posts',[PostController::class,'getAllPost'])->name('post.getallpost');
+//modal
+// Route::get('/posts',[PostController::class,'index']);
 
 Route::get('/add-post',[PostController::class,'addPost'])->name('post.add');
+//modal 
+// Route::post('/add-post',[PostController::class,'addPost'])->name('post.add');
 
 Route::post('/add-post',[PostController::class,'addPostSubmit'])->name('post.addsubmit');
 
@@ -117,3 +122,5 @@ Route::get('/edit-student/{id}' ,[StudentController::class, 'editStudent']);
 Route::post('/update-student', [StudentController::class, 'updateStudent'])->name('student.update');
 
 Route::get('/delete-student/{id}', [StudentController::class, 'deleteStudent']);
+
+Route::get('/employee', [EmployeeController::class, 'index']);
