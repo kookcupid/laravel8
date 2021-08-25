@@ -29,6 +29,9 @@
                 <li class="nav-item">
                 <a class="nav-link" href="/editor">tinymce-editor</a>
                 </li>
+                <li class="nav-item">
+                <a class="nav-link" href="/all-students">all-students</a>
+                </li>
             </ul>
             <ul class="nav justify-content-end">
                 <li class="nav-item">

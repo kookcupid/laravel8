@@ -10,4 +10,6 @@
 
 <!-- cdn.tiny -->
 <script src="https://cdn.tiny.cloud/1/e16h337sauyho7sptejoq3gcim1qaxhoyla1v4vnaergsa5n/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<!-- jquery-3.6.0 -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 

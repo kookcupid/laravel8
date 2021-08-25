@@ -11,6 +11,7 @@ use App\Http\Controllers\MailController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Login;
@@ -104,3 +105,15 @@ Route::get('/editor',[EditorController::class,'editor']);
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('/add-student', [StudentController::class, 'addStudent']);
+
+Route::post('/add-student', [StudentController::class, 'storeStudent'])->name('student.store');
+
+Route::get('/all-students', [StudentController::class, 'students']);
+
+Route::get('/edit-student/{id}' ,[StudentController::class, 'editStudent']);
+
+Route::post('/update-student', [StudentController::class, 'updateStudent'])->name('student.update');
+
+Route::get('/delete-student/{id}', [StudentController::class, 'deleteStudent']);
